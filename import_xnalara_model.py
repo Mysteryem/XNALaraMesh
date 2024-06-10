@@ -666,11 +666,11 @@ def importMesh(armature_ob, meshInfo):
         # unique_smooth_groups = True
 
         if verts_nor:
-            mesh_da.create_normals_split()
+            # mesh_da.create_normals_split()
             meshCorrected = mesh_da.validate(clean_customdata=False)  # *Very* important to not remove nors!
             mesh_da.update(calc_edges=use_edges)
             mesh_da.normals_split_custom_set_from_vertices(normals)
-            mesh_da.use_auto_smooth = True
+            # mesh_da.use_auto_smooth = True
         else:
             meshCorrected = mesh_da.validate()
 
