@@ -312,7 +312,7 @@ def getXpsVertices(selectedArmature, mesh):
     verts_nor = xpsSettings.exportNormals
 
     # Calculates tesselated faces and normal split to make them available for export
-    mesh.data.calc_normals_split()
+    mesh.data.update(calc_edges=True)
     mesh.data.calc_loop_triangles()
     mesh.data.update(calc_edges=True)
     mesh.data.calc_loop_triangles()
